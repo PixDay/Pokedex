@@ -1,6 +1,6 @@
 <h1 fxLayout="row" fxLayoutAlign="center center">PokeTest by Witco</h1>
-<div class="full-width-height" fxLayout="row" fxLayoutAlign="space-around start">
-    <div class="region-button" fxLayout="column" fxLayoutAlign="space-around center" *ngFor="let region of regions; let index = index">
+<div class="full-width-height" fxLayout="row" fxLayoutAlign="space-around start" *ngIf="currentRegion == ''">
+    <div class="region-button" fxLayout="column" fxLayoutAlign="space-around center" *ngFor="let region of regions; let index = index" (click)="setRegion(region)">
         <img src="assets/pokedex.png" alt="Pokedex" class="pokedex-image" />
         <h1>{{region}}</h1>
     </div>
