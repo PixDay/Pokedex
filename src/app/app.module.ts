@@ -10,10 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 // Angular Material Components
 
 // Personal Components and Pages
+import { RegionsComponent } from './pages/regions/regions.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegionsComponent
   ],
   imports: [
     BrowserModule,
