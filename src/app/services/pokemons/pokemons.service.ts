@@ -14,9 +14,7 @@ export class PokemonsService {
       listOfPokemons[loopIndex].image = data.sprites.front_default;
       data.types.forEach((types: any) => {
         listOfPokemons[loopIndex].types.push(types.type.name);
-      })
-      
-      console.log(data); 
+      })      
     }));
   }
 }

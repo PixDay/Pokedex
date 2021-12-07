@@ -28,7 +28,6 @@ export class PokedexService {
       });
       id = 0;
       listOfPokemon.forEach(pokemon => {
-        console.log(pokemon.pokemonId)
         this.pokemonService.getPokemon(pokemon.pokemonId, listOfPokemon, id);
         id++;
       })
