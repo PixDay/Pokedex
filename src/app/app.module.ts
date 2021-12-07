@@ -10,12 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 // Angular Material Components
 
 // Personal Components and Pages
-import { TestPageComponent } from './pages/test-page/test-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TestPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
