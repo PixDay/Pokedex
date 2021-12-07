@@ -1,0 +1,26 @@
+.region-button
+{
+    margin-top: 5%;
+    width: 200px;
+    height: 200px;
+}
+
+.region-button:hover
+{
+    background-color: #bbb;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.pokedex-image
+{
+    width: 130px;
+    height: 130px;
+    margin-top: 10px;
+}
+
+.line-break
+{
+    width: 100%;
+}
