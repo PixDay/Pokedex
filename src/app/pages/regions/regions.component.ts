@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokedexService } from 'src/app/services/pokedex/pokedex.service';
 import { PokemonsService } from 'src/app/services/pokemons/pokemons.service';
+import { Pokemon } from 'src/app/models/pokemon.model';
 
 @Component({
   selector: 'app-regions',
@@ -25,6 +26,8 @@ export class RegionsComponent implements OnInit {
   currentRegion: string = "";
   currentRegionIndex: number = 0;
 
+  listOfPokemons: Pokemon[] = [];
+
   constructor(public pokedexService: PokedexService, public pokemonService: PokemonsService) 
   {
   }
@@ -37,6 +40,6 @@ export class RegionsComponent implements OnInit {
   {
     this.currentRegion = region;
     this.currentRegionIndex = this.regions.indexOf(region) + 1;
-    this.pokedexService.getPokedex(this.currentRegionIndex);
+    this.pokedexService.getPokedex(this.currentRegionIndex, this.listOfPokemons);
   }
 }

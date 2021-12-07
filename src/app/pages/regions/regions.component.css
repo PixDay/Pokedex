@@ -9,9 +9,9 @@
 
 .region-button:hover
 {
-    background-color: #bbb;
+    background-color: #FFF;
     transition: background-color 0.5s;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     border-radius: 100%;
 }

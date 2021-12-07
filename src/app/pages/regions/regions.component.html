@@ -5,3 +5,8 @@
         <h1>{{region}}</h1>
     </div>
 </div>
+<div *ngIf="currentRegion != ''">
+    <div *ngFor="let pokemon of listOfPokemons; let index = index">
+        {{pokemon.name}}
+    </div>
+</div>
