@@ -42,4 +42,10 @@ export class RegionsComponent implements OnInit {
     this.currentRegionIndex = this.regions.indexOf(region) + 1;
     this.pokedexService.getPokedex(this.currentRegionIndex, this.listOfPokemons);
   }
+
+  resetApp()
+  {
+    this.currentRegion = '';
+    this.listOfPokemons = [];
+  }
 }
