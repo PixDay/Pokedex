@@ -1,0 +1,27 @@
+<h1 fxLayout="row" fxLayoutAlign="center center">PokeTest by Witco</h1>
+
+<div class="pokedex-list" *ngIf="currentRegion == ''">
+    <div *ngFor="let region of regions; let index = index" class="region-button" fxLayout="column" fxLayoutAlign="space-around center" (click)="setRegion(region)">
+        <img src="assets/pokedex.png" alt="Pokedex" class="pokedex-image" />
+        <h1>{{region}}</h1>
+    </div>
+</div>
+
+<div class="full-height" *ngIf="currentRegion != ''">
+    <button mat-fab color="primary" class="back-to-pokedex" (click)="resetApp()">
+        <mat-icon>catching_pokemon</mat-icon>
+    </button>
+    <div *ngFor="let pokemon of listOfPokemons; let index = index">
+        <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>{{pokemon.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{pokemon.image}}" alt="Photo of the pokemon">
+            <mat-card-content fxLayout="row" fxLayoutAlign="space-around center" >
+                <p *ngFor="let type of pokemon.types" class="pkm-type {{type}}">
+                    {{type}}
+                </p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
